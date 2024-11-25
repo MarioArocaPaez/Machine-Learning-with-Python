@@ -12,7 +12,7 @@ jupyter:
 ---
 
 <!-- #region id="-5u3a4csUPyn" -->
-#TensorFlow 2.0 Introduction
+# TensorFlow 2.0 Introduction
 In this notebook you will be given an interactive introduction to TensorFlow 2.0. We will walk through the following topics within the TensorFlow module:
 
 - TensorFlow Install and Setup
@@ -25,7 +25,7 @@ If you'd like to follow along without installing TensorFlow on your machine you 
 <!-- #endregion -->
 
 <!-- #region id="F7ThfbiQl96l" -->
-##Installing TensorFlow
+## Installing TensorFlow
 To install TensorFlow on your local machine you can use pip.
 ```console
 pip install tensorflow
@@ -50,7 +50,7 @@ The first step here is going to be to select the correct version of TensorFlow f
 ```
 
 <!-- #region id="duDj86TfWFof" -->
-##Tensors
+## Tensors
 "A tensor is a generalization of vectors and matrices to potentially higher dimensions. Internally, TensorFlow represents tensors as n-dimensional arrays of base datatypes." (https://www.tensorflow.org/guide/tensor)
 
 It should't surprise you that tensors are a fundemental apsect of TensorFlow. They are the main objects that are passed around and manipluated throughout the program. Each tensor represents a partialy defined computation that will eventually produce a value. TensorFlow programs work by building a graph of Tensor objects that details how tensors are related. Running different parts of the graph allow results to be generated.
@@ -73,7 +73,7 @@ print(tf.version)  # make sure the version is 2.x
 ```
 
 <!-- #region id="TAk6QhGUwQRt" -->
-###Creating Tensors
+### Creating Tensors
 Below is an example of how to create some different tensors.
 
 You simply define the value of the tensor and the datatype and you are good to go! It's worth mentioning that usually we deal with tensors of numeric data, it is quite rare to see string tensors.
@@ -90,7 +90,7 @@ floating = tf.Variable(3.567, tf.float64)
 ```
 
 <!-- #region id="D0_H71HMaE-5" -->
-###Rank/Degree of Tensors
+### Rank/Degree of Tensors
 Another word for rank is degree, these terms simply mean the number of dimensions involved in the tensor. What we created above is a *tensor of rank 0*, also known as a scalar.
 
 Now we'll create some tensors of higher degrees/ranks.
@@ -115,7 +115,7 @@ Where in the second example ```[["test", "ok"], ["test", "yes"]]``` is a rank 2 
 <!-- #endregion -->
 
 <!-- #region id="RaVrANK8q21q" -->
-###Shape of Tensors
+### Shape of Tensors
 Now that we've talked about the rank of tensors it's time to talk about the shape. The shape of a tensor is simply the number of elements that exist in each dimension. TensorFlow will try to determine the shape of a tensor but sometimes it may be unknown.
 
 To **get the shape** of a tensor we use the shape attribute.
@@ -127,7 +127,7 @@ rank2_tensor.shape
 ```
 
 <!-- #region id="wVDmLJeFs086" -->
-###Changing Shape
+### Changing Shape
 The number of elements of a tensor is the product of the sizes of all its shapes. There are often many shapes that have the same number of elements, making it convient to be able to change the shape of a tensor.
 
 The example below shows how to change the shape of a tensor.
@@ -154,7 +154,7 @@ print(tensor3)
 ```
 
 <!-- #region id="q88pJucBolsp" -->
-###Slicing Tensors
+### Slicing Tensors
 You may be familiar with the term "slice" in python and its use on lists, tuples etc. Well the slice operator can be used on tensors to select specific axes or elements.
 
 When we slice or select elements from a tensor, we can use comma seperated values inside the set of square brackets. Each subsequent value refrences a different dimension of the tensor.
@@ -197,7 +197,7 @@ print(column_1_in_row_2_and_3)
 ```
 
 <!-- #region id="UU4MMhB_rxvz" -->
-###Types of Tensors
+### Types of Tensors
 Before we go to far, I will mention that there are diffent types of tensors. These are the most used and we will talk more in depth about each as they are used.
 - Variable
 - Constant
@@ -212,7 +212,7 @@ For now, it is enough to understand that we use the Variable tensor when we want
 <!-- #endregion -->
 
 <!-- #region id="F2OoXbe7aSVl" -->
-#Sources
+# Sources
 Most of the information is taken direclty from the TensorFlow website which can be found below.
 
 https://www.tensorflow.org/guide/tensor
